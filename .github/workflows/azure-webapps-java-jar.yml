@@ -55,7 +55,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: 'spring_gradle_azure_app'
-          path: '${{ github.workspace }}/build/libs/*.jar'
+          path: '${{ github.workspace }}/build/libs/spring_gradle_azure_app.jar'
 
   deploy:
     permissions:
