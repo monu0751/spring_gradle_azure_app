@@ -49,7 +49,7 @@ jobs:
         run: chmod +x ./gradlew
 
       - name: Build with Gradle (skip tests)
-        run: ./gradlew build --no-tests
+        run: ./gradlew build -x tests
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
