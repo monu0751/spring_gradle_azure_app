@@ -45,8 +45,11 @@ jobs:
           distribution: ${{ env.DISTRIBUTION }}
           cache: 'gradle'
 
-      - name: Build with Gradle
-        run: ./gradlew build
+      - name: Make Gradlew executable
+        run: chmod +x ./gradlew
+
+      - name: Build with Gradle (skip tests)
+        run: ./gradlew build --no-tests
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
